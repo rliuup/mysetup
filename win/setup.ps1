@@ -1,4 +1,4 @@
 #Requires -RunAsAdministrator
 
-New-Item -Path $HOME/.gitconfig -ItemType SymbolicLink -Value .\config\.gitconfig
-New-Item -Path $HOME/.wslconfig -ItemType SymbolicLink -Value .\config\.wslconfig
+New-Item -Path $HOME/.gitconfig -ItemType SymbolicLink -Value $PWD\dotfiles\.gitconfig
+New-Item -Path $HOME/.wslconfig -ItemType SymbolicLink -Value $PWD\dotfiles\.wslconfig
