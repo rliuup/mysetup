@@ -17,3 +17,6 @@ choco install -y FiraCode
 choco install -y jetbrainsmono
 choco install -y cascadiacode
 choco install -y sourcecodepro
+
+choco install -y oh-my-posh
+
