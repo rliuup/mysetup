@@ -1,6 +1,7 @@
-[user]
-  name = Ruilin Liu
-  email = 76539124+rliuup@users.noreply.github.com
+[include]
+  # include external gitconfig file (requires git 1.7.10+)
+  # typically, user.name and user.email is configured.
+  path = ~/.gitconfig.local
 
 [filter "lfs"]
   process = git-lfs filter-process
