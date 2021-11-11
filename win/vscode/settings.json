@@ -8,6 +8,9 @@
     "[html]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
+    "[beancount]": {
+        "editor.defaultFormatter": "dongfg.vscode-beancount-formatter"
+    },
     "sync.autoDownload": true,
     "sync.autoUpload": true,
     "[typescript]": {
@@ -58,5 +61,14 @@
         "editor.defaultFormatter": "foxundermoon.shell-format"
     },
     "editor.renderWhitespace": "all",
-    "indentRainbow.colorOnWhiteSpaceOnly": true
+    "indentRainbow.colorOnWhiteSpaceOnly": true,
+    "editor.guides.indentation": false,
+    "workbench.colorCustomizations": {
+        "editor.lineHighlightBackground": "#1073cf2d",
+        "editor.lineHighlightBorder": "#9fced11f"
+    },
+    "editor.wordWrap": "off",
+    "diffEditor.wordWrap": "off",
+    "editor.inlayHints.enabled": false,
+    "redhat.telemetry.enabled": false
 }

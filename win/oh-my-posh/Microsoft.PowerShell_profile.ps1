@@ -1,5 +1,14 @@
 
 # Import-Module 'C:\tools\poshgit\dahlbyk-posh-git-9bda399\src\posh-git.psd1'
-# Invoke-Expression "oh-my-posh --init --shell pwsh --config $HOME/ohmyposhv3.json"
+
+if ($null -eq (Get-Module -ListAvailable -Name Terminal-Icons).Name) {
+  Install-Module Terminal-Icons -Force
+}
+
 Import-Module -Name Terminal-Icons
-oh-my-posh --init --shell pwsh --config C:\Users\ruilin.liu\playground\mysetup\win\oh-my-posh\ohmyposhv3.json | Invoke-Expression |  Out-Null
+
+$omhJsonFilePath = "$HOME\.pwsh\ohmyposhv3.json"
+
+if (($null -ne (Get-Command oh-my-posh).Name) -And (Test-Path -Path $omhJsonFilePath -PathType Leaf)) {
+  oh-my-posh --init --shell pwsh --config $omhJsonFilePath | Invoke-Expression |  Out-Null
+}
