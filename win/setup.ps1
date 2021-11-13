@@ -6,4 +6,5 @@ New-Item -Path $HOME\.wslconfig -ItemType SymbolicLink -Value $PSScriptRoot\dotf
 if ($null -ne (Get-Command oh-my-posh).Name) {
   New-Item -ItemType Directory -Force -Path $HOME\.pwsh | Out-Null
   New-Item -Path $HOME\.pwsh\ohmyposhv3.json -ItemType SymbolicLink -Value $PSScriptRoot\oh-my-posh\ohmyposhv3.json -Force
+  New-Item -Path $HOME\.pwsh\Microsoft.PowerShell_profile.ps1 -ItemType SymbolicLink -Value $PSScriptRoot\oh-my-posh\Microsoft.PowerShell_profile.ps1 -Force
 }
