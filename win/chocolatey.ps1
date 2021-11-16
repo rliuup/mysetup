@@ -23,6 +23,7 @@ choco install -y peazip
 choco install -y windirstat
 choco install -y treesizefree
 choco install -y powertoys
+choco install -y powershell-core
 
 
 # Fonts
