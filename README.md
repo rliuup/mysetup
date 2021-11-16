@@ -4,9 +4,9 @@
 
 Start Powershell with 
 ```
-*PowerShell -ExecutionPolicy Bypass -NoLogo -NoProfile -NoExit -Command "Invoke-Expression 'Import-Module $HOME\.pwsh\Microsoft.PowerShell_profile.ps1'"
+*PowerShell -ExecutionPolicy Bypass -NoLogo -NoExit
 ```
 
 ```
-powershell -ExecutionPolicy Bypass -NoLogo -NoProfile -NoExit -Command "Invoke-Expression 'Import-Module $HOME\.pwsh\Microsoft.PowerShell_profile.ps1'"
+powershell -ExecutionPolicy Bypass -NoLogo -NoExit
 ```

@@ -31,7 +31,7 @@
   fame = !python -m gitfame
 
 [init]
-	defaultBranch = main
+  defaultBranch = main
 
 [push]
   default = current # push should only push current branch, not all branches
@@ -58,19 +58,19 @@
   editor = code --wait # https://stackoverflow.com/questions/2596805/how-do-i-make-git-use-the-editor-of-my-choice-for-commits?utm_source=pocket_mylist
 
 [diff]
-	tool = meld
+  tool = meld
   noprefix = true
   renameLimit = 2500
   colorMoved = True
 
 [difftool "meld"]
   prompt = false
-	#path = C:\\Program Files (x86)\\Meld\\Meld.exe
+  #path = C:\\Program Files (x86)\\Meld\\Meld.exe
   external = 'C:\\Program Files (x86)\\Meld\\Meld.exe "$LOCAL" "$REMOTE"'
 
 [merge]
-	tool = meld
+  tool = meld
 
 [mergetool "meld"]
   prompt = false
-	path = C:\\Program Files (x86)\\Meld\\Meld.exe
+  path = C:\\Program Files (x86)\\Meld\\Meld.exe
