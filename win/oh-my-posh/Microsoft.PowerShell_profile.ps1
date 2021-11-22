@@ -7,8 +7,23 @@ if ($null -eq (Get-Module -ListAvailable -Name Terminal-Icons).Name) {
 
 Import-Module -Name Terminal-Icons
 
+if ($null -eq (Get-Module -ListAvailable -Name PSReadLine).Name) {
+  Install-Module PSReadLine -AllowPrerelease -ForceF
+}
+
+if ($host.Name -eq 'ConsoleHost')
+{
+    Import-Module PSReadLine
+    Set-PSReadLineOption -PredictionSource History
+    Set-PSReadLineOption -PredictionViewStyle ListView
+    Set-PSReadLineOption -EditMode Windows
+}
+
 $omhJsonFilePath = "$HOME\.pwsh\ohmyposhv3.json"
 
 if (($null -ne (Get-Command oh-my-posh).Name) -And (Test-Path -Path $omhJsonFilePath -PathType Leaf)) {
   oh-my-posh --init --shell pwsh --config $omhJsonFilePath | Invoke-Expression | Out-Null
 }
+
+# alias
+# Set-Alias -Name history -Value code (Get-PSReadlineOption).HistorySavePath
