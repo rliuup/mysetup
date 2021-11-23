@@ -21,12 +21,13 @@
     "indentRainbow.includedLanguages": [
     
     ],
-    "workbench.iconTheme": "material-icon-theme",
-    "editor.fontFamily": "'Fira Code Retina', Consolas, 'Courier New', monospace",
+    "workbench.iconTheme": "vscode-great-icons",
+    "editor.fontFamily": "'JetBrainsMono NF', 'Fira Code Retina', Consolas, 'Courier New', monospace",
     "editor.fontLigatures": true,
     "editor.fontSize": 16,
     "cSpell.enableFiletypes": [
-        "lookml"
+        "lookml",
+        "powershell"
     ],
     "git.confirmSync": false,
     "git.enableSmartCommit": true,
@@ -38,7 +39,6 @@
         "jupyter-notebook": "left"
     },
     "sync.gist": "a5f7531dfad443301311d170d8b6b19b",
-    "workbench.colorTheme": "Learn with Sumit - Vintage",
     "[json]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
@@ -70,5 +70,6 @@
     "editor.wordWrap": "off",
     "diffEditor.wordWrap": "off",
     "editor.inlayHints.enabled": false,
-    "redhat.telemetry.enabled": false
+    "redhat.telemetry.enabled": false,
+    "workbench.colorTheme": "One Dark Pro Darker"
 }

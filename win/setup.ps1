@@ -20,10 +20,15 @@ Function New-SoftLink {
   }
 }
 
+# install software
+. $PSScriptRoot\chocolatey.ps1
+. $PSScriptRoot\pip.ps1
+
+# git config and wsl config
 New-SoftLink -Source $PSScriptRoot\dotfiles\.gitconfig -Target $HOME\.gitconfig
 New-SoftLink -Source $PSScriptRoot\dotfiles\.wslconfig -Target $HOME\.wslconfig
 
-
+# oh-my-posh
 if ($null -ne (Get-Command oh-my-posh).Name) {
   New-Item -ItemType Directory -Force -Path $HOME\.pwsh | Out-Null
   New-SoftLink -Source $PSScriptRoot\oh-my-posh\ohmyposhv3.json -Target $HOME\.pwsh\ohmyposhv3.json
@@ -35,7 +40,13 @@ if ($null -ne (Get-Command oh-my-posh).Name) {
   New-SoftLink -Source $PSScriptRoot\oh-my-posh\Microsoft.PowerShell_profile.ps1 -Target $PSHOME\Profile.ps1 
 }
 
+# cmder
 if ($null -ne (Get-Command cmder).Name) {
   $CMDERHOME = (Get-Command cmder).Source | % { Split-Path -Path $_ }
   New-SoftLink -Source $PSScriptRoot\cmder\ConEmu.xml -Target $CMDERHOME\vendor\conemu-maximus5\ConEmu.xml 
+}
+
+# VSCode
+if ($null -ne (Get-Command code).Name) {
+  New-SoftLink -Source $PSScriptRoot\vscode\settings.json -Target $env:APPDATA\Code\User\settings.json
 }

@@ -1,4 +1,4 @@
-pip install -q windows-curses
-pip install -q glances
-pip install -q git-fame
-pip install -q fava
+pip install windows-curses
+pip install glances
+pip install git-fame
+pip install fava
