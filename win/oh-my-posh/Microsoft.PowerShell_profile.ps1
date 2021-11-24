@@ -8,7 +8,8 @@ if ($null -eq (Get-Module -ListAvailable -Name Terminal-Icons).Name) {
 Import-Module -Name Terminal-Icons
 
 if ($null -eq (Get-Module -ListAvailable -Name PSReadLine).Name) {
-  Install-Module PSReadLine -AllowPrerelease -ForceF
+  Install-Module PowershellGet -Force
+  Install-Module PSReadLine -AllowPrerelease -Force
 }
 
 if ($host.Name -eq 'ConsoleHost')
